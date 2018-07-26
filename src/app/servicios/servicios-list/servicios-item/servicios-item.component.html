@@ -1,0 +1,13 @@
+<!-- <div class="col-6 col-lg-4 d-flex mb-3"></div> -->
+<div class="mb-3">
+    <div class="card flex-fill">
+    <div class="card-body text-dark">
+        <h5 class="card-title">{{ service.title }}</h5>
+        <p class="card-text">{{ service.description }}</p>
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-link" (click)="onSelected()">Editar</button>
+        <button type="button" class="btn btn-link" (click)="onDelete()" >Eliminar</button>
+    </div>
+    </div>
+</div>

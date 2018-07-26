@@ -1,0 +1,14 @@
+<div>
+  <div class="container-fluid mx-auto d-none d-md-block my-3">
+    <div class="row">
+      
+      <app-servicios-item
+        *ngFor="let a_service of servicesList"
+        [service]="a_service"
+        (serviceSelected)="onServiceSelected(a_service)"
+        (serviceDelete)="onServiceDelete(a_service)"
+        ></app-servicios-item>
+
+    </div>
+  </div>
+</div>

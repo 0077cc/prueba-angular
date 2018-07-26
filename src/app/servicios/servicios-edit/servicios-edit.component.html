@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Servicio</h5>
+    <form>
+      <div class="form-service">
+        <label>Nombre</label>
+        <input type="text" class="form-control" name="title" value="{{ service.title }}" #serviceTitleInput/>
+      </div>
+      <div class="form-group">
+        <label>Descripci&oacute;n</label>
+        <input type="text" class="form-control" name="desc" value="{{ service.description }}" #serviceDescInput/>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-md btn-s btn-outline-secondary" (click)="onSaveService()">Grabar</button>&nbsp;
+        <button type="button" class="btn btn-md btn-outline-danger">Cancelar</button>&nbsp; 
+      </div>
+    </form>
+  </div>
+</div>
