@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Service } from '../../../../models/service';
+import { Service } from '../../service.model';
 
 @Component({
   selector: 'app-servicios-item',

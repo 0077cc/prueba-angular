@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
-import { Service } from '../../../models/service';
+import { Service } from '../service.model';
 
 import { ServiciosService } from '../servicios.service';
 

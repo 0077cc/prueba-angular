@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ServiciosItemComponent } from './servicios/servicios-list/servicios-item/servicios-item.component';
 
 import { ServiciosService } from './servicios/servicios.service';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ServiciosService } from './servicios/servicios.service';
     ServiciosListComponent,
     ServiciosEditComponent,
     ServiciosItemComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

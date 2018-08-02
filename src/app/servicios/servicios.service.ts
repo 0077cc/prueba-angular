@@ -1,7 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 // import { ServiciosComponent } from './servicios.component';
 
-import { Service } from '../../models/service';
+import { Service } from './service.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +11,12 @@ export class ServiciosService {
   servicesChanged = new EventEmitter<Service[]>();
 
   private servicesList: Service[] = [
-    new Service('Electricidad', '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit', 3),
-    new Service('Auxilio Mecanico', '2. Lorem ipsum dolor sit amet, consectetur adipiscing elit', 1),
-    new Service('Chofer reemplazo', '3. Lorem ipsum dolor sit amet, consectetur adipiscing elit', 1),
-    new Service('Medico a domicilio', '4. Lorem ipsum dolor sit amet, consectetur adipiscing elit', 2),
-    new Service('Ambulancia', '5. Lorem ipsum dolor sit amet, consectetur adipiscing elit', 2),
-    new Service('Gasfitero', '6. Lorem ipsum dolor sit amet, consectetur adipiscing elit', 3),
+    new Service(1, 'Electricidad', '1. Lorem ipsum dolor sit amet, consectetur adipiscing elit', 3),
+    new Service(2, 'Auxilio Mecanico', '2. Lorem ipsum dolor sit amet, consectetur adipiscing elit', 1),
+    new Service(3, 'Chofer reemplazo', '3. Lorem ipsum dolor sit amet, consectetur adipiscing elit', 1),
+    new Service(4, 'Medico a domicilio', '4. Lorem ipsum dolor sit amet, consectetur adipiscing elit', 2),
+    new Service(5, 'Ambulancia', '5. Lorem ipsum dolor sit amet, consectetur adipiscing elit', 2),
+    new Service(6, 'Gasfitero', '6. Lorem ipsum dolor sit amet, consectetur adipiscing elit', 3),
   ];
 
   constructor() { }
