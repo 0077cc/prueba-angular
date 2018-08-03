@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Service } from '../service.model';
 import { ServiciosService } from '../servicios.service';
@@ -9,8 +9,6 @@ import { ServiciosService } from '../servicios.service';
   styleUrls: ['./servicios-list.component.css']
 })
 export class ServiciosListComponent implements OnInit {
-
-  @Output() serviceWasSelected = new EventEmitter<Service>();
   
   servicesList: Service[];
 
@@ -24,15 +22,6 @@ export class ServiciosListComponent implements OnInit {
           this.servicesList = servicesList;
         }
       );
-  }
-  
-  onServiceSelected(service: Service) {
-    this.serviceWasSelected.emit(service);
-  }
-
-  onServiceDelete(service: Service) {
-    const i: number = this.servicesList.indexOf(service);
-    this.servicesList.splice(i, 1);
   }
 
 }

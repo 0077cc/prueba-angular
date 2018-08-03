@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { Service } from '../service.model';
 
 import { ServiciosService } from '../servicios.service';
@@ -12,7 +12,6 @@ import { ServiciosService } from '../servicios.service';
 export class ServiciosEditComponent implements OnInit {
 
   @Input() service: Service;
-  // @Output() serviceUpdated = new EventEmitter<Service>();
   @ViewChild('serviceTitleInput') serviceTitleInput: ElementRef;
   @ViewChild('serviceDescInput') serviceDescrInput: ElementRef;
 
@@ -27,12 +26,10 @@ export class ServiciosEditComponent implements OnInit {
       this.serviceTitleInput.nativeElement.value,
       this.serviceDescrInput.nativeElement.value
     );
-    // this.serviceUpdated.emit(this.service);
+  }
 
-    // this.serviceUpdated.emit({
-    //   title: this.serviceTitleInput.nativeElement.value,
-    //   description: this.serviceDescrInput.nativeElement.value
-    // });
+  onCancel() {
+    this.serviciosService.serviceSelected.emit(null);
   }
 
 }

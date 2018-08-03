@@ -8,6 +8,7 @@ import { Service } from './service.model';
 })
 export class ServiciosService {
 
+  serviceSelected = new EventEmitter<Service>();
   servicesChanged = new EventEmitter<Service[]>();
 
   private servicesList: Service[] = [
@@ -22,21 +23,27 @@ export class ServiciosService {
   constructor() { }
 
   getServices() {
-    return this.servicesList;
+    return this.servicesList.slice();
   };
 
   updateService(service: Service, title: string, desc: string) {
     const i: number = this.servicesList.indexOf(service);
     this.servicesList[i].title = title;
     this.servicesList[i].description = desc;
-    // this.servicesChanged.emit(this.servicesList.slice());
+    this.servicesChanged.emit(this.servicesList.slice());
   };
+
+  deleteService(service: Service) {
+    const i: number = this.servicesList.indexOf(service);
+    this.servicesList.splice(i, 1);
+    this.servicesChanged.emit(this.servicesList.slice());
+  }
 
   filterService(c: number) {
     if (c === 0) {
-      this.servicesChanged.emit(this.servicesList);
+      this.servicesChanged.emit(this.servicesList.slice());
     } else {
-      this.servicesChanged.emit(this.servicesList.filter((service: Service) => service.category === c));
+      this.servicesChanged.emit(this.servicesList.filter((service: Service) => service.category === c).slice());
     }
   }
 
