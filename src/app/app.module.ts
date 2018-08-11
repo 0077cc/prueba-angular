@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ServiciosComponent } from './servicios/servicios.component';
@@ -12,6 +13,10 @@ import { ServiciosItemComponent } from './servicios/servicios-list/servicios-ite
 import { ServiciosService } from './servicios/servicios.service';
 import { HeaderComponent } from './header/header.component';
 
+const appRoutes: Routes = [
+  // { path: '', component: app-root }
+]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +28,8 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ServiciosService],
   bootstrap: [AppComponent]
