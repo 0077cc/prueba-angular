@@ -12,9 +12,12 @@ import { ServiciosItemComponent } from './servicios/servicios-list/servicios-ite
 
 import { ServiciosService } from './servicios/servicios.service';
 import { HeaderComponent } from './header/header.component';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
-  // { path: '', component: app-root }
+  { path: '', redirectTo: '/services', pathMatch: 'full'  },
+  { path: 'services', component: ServiciosComponent },
+  { path: 'about', component: AboutComponent }
 ]
 
 @NgModule({
@@ -25,6 +28,7 @@ const appRoutes: Routes = [
     ServiciosEditComponent,
     ServiciosItemComponent,
     HeaderComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
