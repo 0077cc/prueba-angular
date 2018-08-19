@@ -16,7 +16,9 @@ import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/services', pathMatch: 'full'  },
-  { path: 'services', component: ServiciosComponent },
+  { path: 'services', component: ServiciosComponent, children: [
+    { path: ':id/edit', component: ServiciosEditComponent },
+  ] },
   { path: 'about', component: AboutComponent }
 ]
 

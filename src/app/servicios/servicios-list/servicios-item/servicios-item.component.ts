@@ -17,7 +17,7 @@ export class ServiciosItemComponent implements OnInit {
   }
 
   onSelected() {
-    this.serviciosService.serviceSelected.emit(this.service);
+    // this.serviciosService.serviceSelected.emit(this.service);
   }
 
   onDelete() {

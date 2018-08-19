@@ -8,7 +8,7 @@ import { Service } from './service.model';
 })
 export class ServiciosService {
 
-  serviceSelected = new EventEmitter<Service>();
+  // serviceSelected = new EventEmitter<Service>();
   servicesChanged = new EventEmitter<Service[]>();
 
   private servicesList: Service[] = [
@@ -24,6 +24,13 @@ export class ServiciosService {
 
   getServices() {
     return this.servicesList.slice();
+  };
+
+  getService(index: number) {
+    // return this.servicesList.indexOf();
+    // return this.servicesList[index];
+    const item = this.servicesList.find(function (item) { return item.id === index; });
+    return item;
   };
 
   updateService(service: Service, title: string, desc: string) {

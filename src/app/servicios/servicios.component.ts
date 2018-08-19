@@ -15,12 +15,12 @@ export class ServiciosComponent implements OnInit {
   constructor(private serviciosService: ServiciosService) { }
 
   ngOnInit() {
-    this.serviciosService.serviceSelected
-      .subscribe(
-        (service: Service) => {
-          this.selectedService = service;
-        }
-      )
+    // this.serviciosService.serviceSelected
+    //   .subscribe(
+    //     (service: Service) => {
+    //       this.selectedService = service;
+    //     }
+    //   )
   }
 
 }
