@@ -5,6 +5,7 @@
 ## Examen Práctico
 
 `// Uso de Let y Const`
+
 let nombre:string = "César Tapia";
 const edad:number = 32;
 const PERSONAJE = {
