@@ -6,7 +6,7 @@
         <p class="card-text">{{ service.description }}</p>
     </div>
     <div class="card-footer">
-        <button type="button" class="btn btn-link" [routerLink]="[service.id, 'edit']">Editar</button>
+        <button type="button" class="btn btn-link" [routerLink]="[service.id, 'edit']" queryParamsHandling="merge">Editar</button>
         <!-- <button type="button" class="btn btn-link" (click)="onSelected()">Editar</button> -->
         <button type="button" class="btn btn-link" (click)="onDelete()" >Eliminar</button>
     </div>

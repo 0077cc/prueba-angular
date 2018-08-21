@@ -50,7 +50,7 @@ export class ServiciosService {
     if (c === 0) {
       this.servicesChanged.emit(this.servicesList.slice());
     } else {
-      this.servicesChanged.emit(this.servicesList.filter((service: Service) => service.category === c).slice());
+      this.servicesChanged.emit(this.servicesList.slice().filter((service: Service) => service.category === c));
     }
   }
 
