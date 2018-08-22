@@ -2,7 +2,7 @@
 
 `Richard Pantoja`
 
-## Examen Práctico
+## Práctica
 
 `// Uso de Let y Const`
 
