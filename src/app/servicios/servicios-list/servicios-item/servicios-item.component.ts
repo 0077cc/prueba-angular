@@ -33,10 +33,6 @@ export class ServiciosItemComponent implements OnInit {
     const filter = this.route.snapshot.queryParams.filter;
     this.serviciosService.filterService(filter ? +filter : 0);
     
-    
-    // console.log(this.route.snapshot.queryParams);
-    // console.log(this.route.snapshot.params);
-    
     this.router.navigate(['services'], {queryParamsHandling: 'preserve'});
   }
 
