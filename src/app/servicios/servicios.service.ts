@@ -37,7 +37,7 @@ export class ServiciosService {
     const i: number = this.servicesList.indexOf(service);
     this.servicesList[i].title = title;
     this.servicesList[i].description = desc;
-    this.servicesChanged.emit(this.servicesList.slice());
+    // this.servicesChanged.emit(this.servicesList.slice());
   };
 
   deleteService(service: Service) {

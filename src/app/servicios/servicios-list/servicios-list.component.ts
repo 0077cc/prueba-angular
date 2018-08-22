@@ -21,7 +21,6 @@ export class ServiciosListComponent implements OnInit {
     this.serviciosService.servicesChanged
       .subscribe(
         (servicesList: Service[]) => {
-          console.log('servicesChanged ... loving angular');
           this.servicesList = servicesList;
         }
       );

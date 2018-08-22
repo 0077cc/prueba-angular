@@ -35,11 +35,14 @@ export class ServiciosEditComponent implements OnInit {
     this.serviciosService.updateService(this.service,
                                         this.serviceTitleInput.nativeElement.value,
                                         this.serviceDescrInput.nativeElement.value);
+    this.onCancel();
   }
 
   onCancel() {
     // this.serviciosService.serviceSelected.emit(null);
-    this.router.navigate(['../']);
+    // this.router.navigate(['../']);
+    this.router.navigate(['services'], {queryParamsHandling: 'preserve'});
+    // this.router.navigate(['../'], {queryParamsHandling: 'preserve'});
   }
 
 }
